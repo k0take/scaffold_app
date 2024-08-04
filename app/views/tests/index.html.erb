@@ -1,0 +1,10 @@
+<%= form_with url: "/tests", method: :post, html: { class: 'test_form' } do |form| %>
+  <%= form.text_field :name, class: 'input_name' %>
+  <%= form.submit '投稿する', class: 'submit_test' %>
+<% end %>
+
+<div id="list">
+  <% @tests.each do |test| %>
+    <div><%= test.name %></div>
+  <% end %>
+</div>
